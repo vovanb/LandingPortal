@@ -609,6 +609,7 @@ h3 {
 
 .phone-strip {
   display: flex;
+  direction: ltr;
   gap: 18px;
   align-items: center;
   overflow-x: auto;

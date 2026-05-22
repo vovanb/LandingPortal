@@ -354,7 +354,7 @@
       const screenCopy = document.querySelector(".screen-copy");
 
       if (phoneStrip) {
-        let scrollDirection = 1;
+        let activePhoneIndex = 0;
         let autoScrollId = null;
 
         function syncPhoneStripHeight() {
@@ -378,15 +378,13 @@
           if (window.matchMedia("(max-width: 680px)").matches || autoScrollId) return;
 
           autoScrollId = window.setInterval(() => {
-            const maxScroll = phoneStrip.scrollWidth - phoneStrip.clientWidth;
             const scrollStep = getPhoneScrollStep();
-            if (maxScroll <= 0 || scrollStep <= 0) return;
+            const phoneCount = phoneStrip.querySelectorAll("img").length;
+            if (phoneCount <= 1 || scrollStep <= 0) return;
 
-            if (phoneStrip.scrollLeft >= maxScroll - 2) scrollDirection = -1;
-            if (phoneStrip.scrollLeft <= 2) scrollDirection = 1;
-
-            phoneStrip.scrollBy({
-              left: scrollDirection * scrollStep,
+            activePhoneIndex = (activePhoneIndex + 1) % phoneCount;
+            phoneStrip.scrollTo({
+              left: activePhoneIndex * scrollStep,
               behavior: "smooth"
             });
           }, 2600);
