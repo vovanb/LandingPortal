@@ -28,6 +28,10 @@ body {
   overflow-x: hidden;
 }
 
+[dir="rtl"] body {
+  font-family: Alef, Arial, sans-serif;
+}
+
 img {
   display: block;
   max-width: 100%;
