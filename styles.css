@@ -616,7 +616,7 @@ h3 {
   padding: 4px 4px 20px;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  scrollbar-width: thin;
+  scrollbar-width: none;
 }
 
 .scroll-hint {
