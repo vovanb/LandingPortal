@@ -22,6 +22,10 @@
           <div class="brand" aria-label="Toyra Apps">
             <img src="assets/toyra-logo.png" alt="">
             <span>Toyra Apps</span>
+            <nav class="language-switch" aria-label="Language">
+              <a href="?lang=en" data-lang-link="en">EN</a>
+              <a href="?lang=he" data-lang-link="he">עברית</a>
+            </nav>
           </div>
 
           <div class="hero-grid">
@@ -53,7 +57,8 @@
                 <img src="assets/google-play.png" alt="" aria-hidden="true">
               </a>
 
-              <p class="compatibility">Requires Android 8.0 or higher for caregiver and patient      </div>
+              <p class="compatibility">Requires Android 8.0 or higher for caregiver and patient.</p>
+            </div>
 
             <aside class="signup-panel" aria-label="Own story summary">
               <p class="panel-kicker">From family need to product</p>
@@ -72,13 +77,13 @@
               </div>
               <a
                 class="cta panel-cta whatsapp-cta"
-                href="https://wa.me/972503779955"
+                href="https://api.whatsapp.com/send?phone=972503779955"
                 aria-label="Contact Toyra on WhatsApp"
               >
                 <svg class="whatsapp-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
                   <path d="M16 3.2A12.6 12.6 0 0 0 5.2 22.3L3.8 28l5.9-1.5A12.6 12.6 0 1 0 16 3.2Zm0 2.4a10.2 10.2 0 0 1 8.7 15.5 10.2 10.2 0 0 1-13.8 3.4l-.4-.2-3.2.8.8-3.1-.3-.5A10.2 10.2 0 0 1 16 5.6Zm-4.1 5.4c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.9 4.5 3.9 2.2.9 2.7.7 3.2.6.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.1.1-1.3-.1-.1-.2-.2-.5-.4l-1.8-.9c-.3-.1-.5-.2-.7.2-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.5-1.5-1.8-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-1.9c-.2-.5-.4-.5-.7-.5h-.4Z"></path>
                 </svg>
-                Contact us on WhatsApp
+                <span class="whatsapp-label">Contact us on WhatsApp</span>
               </a>
               <p class="privacy-note">No content data is stored. Server-side encryption compliant
 with a range of security standards</p>
@@ -267,5 +272,333 @@ with a range of security standards</p>
       </p>
       <p>Toyra is a support tool and does not replace medical advice, emergency services, or direct supervision.</p>
     </footer>
+
+    <script>
+      const pageText = {
+        en: {
+          lang: "en",
+          dir: "ltr",
+          title: "Toyra Apps - Dementia Care Support",
+          description: "Toyra helps caregivers support a person living with dementia through easy calls, reminders, location checks, alerts, and calming assistance.",
+          brandLabel: "Toyra Apps",
+          languageLabel: "Language",
+          heroLabel: "Own Story",
+          heroTitle: "My father Alex was diagnosed with dementia.",
+          alexAlt: "Alex, whose dementia care story inspired Toyra.",
+          lede: "His symptoms changed everyday life for the whole family: memory loss, loss of interest, difficulty understanding time and place, trouble communicating, and fear of staying alone.",
+          benefitsLabel: "Own story details",
+          benefits: [
+            "<strong>My mother became the round-the-clock caregiver</strong> and handled all daily care tasks.",
+            "<strong>Alex needed constant reassurance</strong> and often looked for his wife.",
+            "<strong>The family needed a practical tool</strong> to keep him connected, safer, and calmer."
+          ],
+          primaryCta: "Get Toyra now",
+          primaryCtaLabel: "Get Toyra on Google Play now",
+          compatibility: "Requires Android 8.0 or higher for caregiver and patient.",
+          panelLabel: "Own story summary",
+          panelKicker: "From family need to product",
+          panelTitle: "Toyra was created to support dementia care at home.",
+          roles: [
+            "Alex needed simpler ways to call, ask for help, and stay occupied.",
+            "His caregiver needed alarms, location, remote help, and status visibility.",
+            "Stabilize and improve my father’s cognitive condition through daily AI interaction"
+          ],
+          whatsapp: "Contact us on WhatsApp",
+          whatsappLabel: "Contact Toyra on WhatsApp",
+          privacyNote: "No content data is stored. Server-side encryption compliant with a range of security standards",
+          proofLabel: "Alex problems and common dementia care problems",
+          proofEyebrow: "My father Alex's problems",
+          proofTitle: "The first problems were memory loss, lose interest in activities",
+          proofCopy: "Alex asked the same questions again and again, could not reliably answer or dial calls, lost interest in activities, forgot his birthday and address, did not know how to get home, and did not agree to stay home alone.",
+          problems: [
+            ["Repeated questions", "He could ask the same question and not remember the answer."],
+            ["Calls became difficult", "He could not always answer calls or call family members himself."],
+            ["Disorientation", "He could forget the day, time, address, or how to return home."],
+            ["Fear of being alone", "He looked for his wife constantly and resisted staying home alone."]
+          ],
+          commonLabel: "Common dementia care problems",
+          commonEyebrow: "Common problems",
+          commonTitle: "Many families face the same care gaps.",
+          commonItems: [
+            "Locate the patient if he wanders outside.",
+            "Maintain daily routines such as bathroom, brushing teeth, medication, and exercise reminders.",
+            "Provide brain games, calming techniques, and meaningful activity.",
+            "Reduce social isolation and help the patient stay connected to loved ones.",
+            "Raise emergency alarms to family members or caregivers.",
+            "Bridge language barriers when a caregiver cannot speak the patient's language."
+          ],
+          featuresLabel: "Toyra solution features",
+          solutionEyebrow: "Toyra solution",
+          solutionTitle: "Features built around those care moments.",
+          solutionCopy: "Toyra combines safety, communication, reminders, entertainment, and AI assistance in one Android app flow for the patient and caregiver.",
+          featureItems: [
+            ["SOS", "Emergency alerts", "Patient SOS and condition alarms reach the caregiver quickly."],
+            ["PIN", "Location support", "Check the patient location and receive snapshots when needed."],
+            ["AI", "AI speech assistance", "Calming prompts and mental speech support help reduce anxiety and isolation."],
+            ["Voice of Memory", "Loved one", "Toyra also helps preserve LO memories and life stories before they disappear."],
+            ["CALL", "Voice and touch calls", "Outbound calls can be started by voice recognition or simple on-screen buttons."],
+            ["PLAY", "Memory games and media", "Music, messages, and cognitive activities can be triggered by schedule or request."]
+          ],
+          screensLabel: "Toyra app screens",
+          modesEyebrow: "Two modes",
+          modesTitle: "CareGiverRole and Patient mode work together.",
+          modesCopy: "Caregiver and Patient are linked using the patient's phone number. The patient gets a simple front door for help. The caregiver gets remote visibility and action tools.",
+          modesLabel: "Toyra modes",
+          caregiverTitle: "CareGiverRole",
+          caregiverItems: [
+            "Receive emergency and condition alarms.",
+            "Start video calls and send reminders.",
+            "View patient location on a map.",
+            "Check current status and snapshots."
+          ],
+          patientTitle: "Patient",
+          patientItems: [
+            "Reducing loneliness and anxiety",
+            "A sense of orientation, safety, and structure in daily life",
+            "Stimulate memory and engagement",
+            "Emotional stimulation through family-shared content (messages, videos, music)"
+          ],
+          phoneLabel: "Toyra interface previews",
+          phoneAlts: [
+            "Toyra patient support screen with SOS button and speech assistance.",
+            "Toyra patient location screen with map and status image.",
+            "Toyra emergency notification shown on caregiver phone."
+          ],
+          expertiseLabel: "Care expertise",
+          expertiseEyebrow: "Care expertise behind the product",
+          expertiseTitle: "Designed with geriatric care experience and field-tested caregiving insight.",
+          quote: "Toyra combines hands-on dementia care knowledge with practical service design for elderly support, emergency response, telemedicine, and home care operations.",
+          quoteCredit: "Specialist input from geriatric care and elderly-service project leaders.",
+          finalLabel: "Download Toyra",
+          finalTitle: "Make tomorrow’s care a little easier.",
+          finalCopy: "Install Toyra and connect patient and caregiver phones today.",
+          finalButton: "Download Toyra now",
+          finalButtonLabel: "Download Toyra on Google Play now",
+          floating: "Get Toyra now",
+          floatingLabel: "Get Toyra now",
+          privacyLink: "Privacy Policy",
+          footerSupport: "Toyra is a support tool and does not replace medical advice, emergency services, or direct supervision."
+        },
+        he: {
+          lang: "he",
+          dir: "rtl",
+          title: "Toyra Apps - תמיכה בטיפול בדמנציה",
+          description: "Toyra עוזרת למטפלים לתמוך באדם עם דמנציה בבית בעזרת שיחות פשוטות, תזכורות, מיקום, התרעות וסיוע מרגיע.",
+          brandLabel: "Toyra Apps",
+          languageLabel: "שפה",
+          heroLabel: "הסיפור האישי",
+          heroTitle: "אבי אלכס אובחן עם דמנציה.",
+          alexAlt: "אלכס, שסיפור הטיפול בו נתן השראה ל-Toyra.",
+          lede: "התסמינים שלו שינו את חיי היום יום של כל המשפחה: אובדן זיכרון, אובדן עניין, קושי להבין זמן ומקום, קושי לתקשר ופחד להישאר לבד.",
+          benefitsLabel: "פרטי הסיפור האישי",
+          benefits: [
+            "<strong>אמי הפכה למטפלת מסביב לשעון</strong> וטיפלה בכל משימות היום יום.",
+            "<strong>אלכס היה צריך הרגעה מתמדת</strong> ולעיתים קרובות חיפש את אשתו.",
+            "<strong>המשפחה הייתה זקוקה לכלי מעשי</strong> שיעזור לו להישאר מחובר, בטוח ורגוע יותר."
+          ],
+          primaryCta: "הורדת Toyra",
+          primaryCtaLabel: "הורדת Toyra מ-Google Play",
+          compatibility: "נדרש Android 8.0 ומעלה עבור המטפל והמטופל.",
+          panelLabel: "סיכום הסיפור האישי",
+          panelKicker: "מצורך משפחתי למוצר",
+          panelTitle: "Toyra נוצרה כדי לתמוך בטיפול בדמנציה בבית.",
+          roles: [
+            "אלכס היה צריך דרכים פשוטות יותר להתקשר, לבקש עזרה ולהישאר עסוק.",
+            "המטפל היה צריך התרעות, מיקום, עזרה מרחוק ונראות של מצב המטופל.",
+            "לייצב ולשפר את המצב הקוגניטיבי של אבי באמצעות אינטראקציה יומית עם AI"
+          ],
+          whatsapp: "צרו קשר ב-WhatsApp",
+          whatsappLabel: "יצירת קשר עם Toyra ב-WhatsApp",
+          privacyNote: "לא נשמרים נתוני תוכן. ההצפנה בצד השרת עומדת במגוון תקני אבטחה",
+          proofLabel: "הבעיות של אלכס ובעיות נפוצות בטיפול בדמנציה",
+          proofEyebrow: "הבעיות של אבי אלכס",
+          proofTitle: "הבעיות הראשונות היו אובדן זיכרון ואובדן עניין בפעילויות",
+          proofCopy: "אלכס שאל את אותן שאלות שוב ושוב, לא תמיד הצליח לענות לשיחות או לחייג, איבד עניין בפעילויות, שכח את יום ההולדת והכתובת שלו, לא ידע איך לחזור הביתה ולא הסכים להישאר לבד בבית.",
+          problems: [
+            ["שאלות חוזרות", "הוא היה יכול לשאול את אותה שאלה ולא לזכור את התשובה."],
+            ["שיחות הפכו לקשות", "הוא לא תמיד הצליח לענות לשיחות או להתקשר לבני המשפחה בעצמו."],
+            ["חוסר התמצאות", "הוא היה עלול לשכוח את היום, השעה, הכתובת או איך לחזור הביתה."],
+            ["פחד להישאר לבד", "הוא חיפש את אשתו כל הזמן והתנגד להישאר לבד בבית."]
+          ],
+          commonLabel: "בעיות נפוצות בטיפול בדמנציה",
+          commonEyebrow: "בעיות נפוצות",
+          commonTitle: "משפחות רבות מתמודדות עם אותם פערים בטיפול.",
+          commonItems: [
+            "לאתר את המטופל אם הוא יוצא ומשוטט בחוץ.",
+            "לשמור על שגרת יום כמו שירותים, צחצוח שיניים, תרופות ותזכורות לפעילות.",
+            "לספק משחקי זיכרון, טכניקות הרגעה ופעילות משמעותית.",
+            "להפחית בידוד חברתי ולעזור למטופל להישאר מחובר לאנשים קרובים.",
+            "להעביר התרעות חירום לבני משפחה או למטפלים.",
+            "לגשר על פערי שפה כאשר המטפל אינו מדבר את שפת המטופל."
+          ],
+          featuresLabel: "יכולות הפתרון של Toyra",
+          solutionEyebrow: "הפתרון של Toyra",
+          solutionTitle: "יכולות שנבנו סביב רגעי הטיפול האלה.",
+          solutionCopy: "Toyra משלבת בטיחות, תקשורת, תזכורות, בידור וסיוע AI בתהליך אחד באפליקציית Android עבור המטופל והמטפל.",
+          featureItems: [
+            ["SOS", "התרעות חירום", "כפתור SOS והתרעות מצב מהמטופל מגיעים במהירות למטפל."],
+            ["מיקום", "תמיכה במיקום", "בדיקת מיקום המטופל וקבלת תמונות מצב בעת הצורך."],
+            ["AI", "סיוע דיבור באמצעות AI", "הנחיות מרגיעות ותמיכה בדיבור עוזרות להפחית חרדה ובדידות."],
+            ["זיכרון", "אדם אהוב", "Toyra עוזרת גם לשמר זיכרונות וסיפורי חיים לפני שהם נעלמים."],
+            ["שיחה", "שיחות קול ומגע", "אפשר להתחיל שיחות יוצאות בזיהוי קולי או בכפתורים פשוטים על המסך."],
+            ["משחק", "משחקי זיכרון ומדיה", "מוזיקה, הודעות ופעילויות קוגניטיביות יכולות לפעול לפי תזמון או בקשה."]
+          ],
+          screensLabel: "מסכי אפליקציית Toyra",
+          modesEyebrow: "שני מצבים",
+          modesTitle: "מצב מטפל ומצב מטופל עובדים יחד.",
+          modesCopy: "המטפל והמטופל מקושרים באמצעות מספר הטלפון של המטופל. המטופל מקבל כניסה פשוטה לעזרה. המטפל מקבל נראות מרחוק וכלי פעולה.",
+          modesLabel: "מצבי Toyra",
+          caregiverTitle: "מטפל",
+          caregiverItems: [
+            "קבלת התרעות חירום והתרעות מצב.",
+            "התחלת שיחות וידאו ושליחת תזכורות.",
+            "צפייה במיקום המטופל על מפה.",
+            "בדיקת מצב נוכחי ותמונות מצב."
+          ],
+          patientTitle: "מטופל",
+          patientItems: [
+            "הפחתת בדידות וחרדה",
+            "תחושת התמצאות, ביטחון ומבנה בחיי היום יום",
+            "גירוי זיכרון ומעורבות",
+            "גירוי רגשי באמצעות תוכן משפחתי משותף כמו הודעות, וידאו ומוזיקה"
+          ],
+          phoneLabel: "תצוגות ממשק Toyra",
+          phoneAlts: [
+            "מסך תמיכה במטופל עם כפתור SOS וסיוע בדיבור.",
+            "מסך מיקום המטופל עם מפה ותמונת מצב.",
+            "התראת חירום של Toyra שמוצגת בטלפון המטפל."
+          ],
+          expertiseLabel: "מומחיות טיפול",
+          expertiseEyebrow: "מומחיות טיפול מאחורי המוצר",
+          expertiseTitle: "תוכנן עם ניסיון בטיפול גריאטרי ותובנות מהשטח.",
+          quote: "Toyra משלבת ידע מעשי בטיפול בדמנציה עם עיצוב שירותים לתמיכה בקשישים, תגובה לחירום, טלרפואה וטיפול ביתי.",
+          quoteCredit: "קלט מקצועי ממומחים לטיפול גריאטרי ומובילי פרויקטים בשירותי קשישים.",
+          finalLabel: "הורדת Toyra",
+          finalTitle: "להפוך את הטיפול של מחר לקצת קל יותר.",
+          finalCopy: "התקינו את Toyra וחברו היום את הטלפון של המטופל והמטפל.",
+          finalButton: "הורדת Toyra",
+          finalButtonLabel: "הורדת Toyra מ-Google Play",
+          floating: "הורדת Toyra",
+          floatingLabel: "הורדת Toyra",
+          privacyLink: "מדיניות פרטיות",
+          footerSupport: "Toyra היא כלי תמיכה ואינה מחליפה ייעוץ רפואי, שירותי חירום או השגחה ישירה."
+        }
+      };
+
+      function setText(selector, value) {
+        const element = document.querySelector(selector);
+        if (element) element.textContent = value;
+      }
+
+      function setHtml(selector, value) {
+        const element = document.querySelector(selector);
+        if (element) element.innerHTML = value;
+      }
+
+      function setAttr(selector, name, value) {
+        const element = document.querySelector(selector);
+        if (element) element.setAttribute(name, value);
+      }
+
+      function setList(selector, values, html = false) {
+        document.querySelectorAll(selector).forEach((element, index) => {
+          if (values[index]) {
+            if (html) element.innerHTML = values[index];
+            else element.textContent = values[index];
+          }
+        });
+      }
+
+      function applyLanguage(language) {
+        const copy = pageText[language] || pageText.en;
+        document.documentElement.lang = copy.lang;
+        document.documentElement.dir = copy.dir;
+        document.title = copy.title;
+        setAttr("meta[name='description']", "content", copy.description);
+        setAttr(".brand", "aria-label", copy.brandLabel);
+        setText(".brand > span", "Toyra Apps");
+        setAttr(".language-switch", "aria-label", copy.languageLabel);
+        setText(".hero .eyebrow", copy.heroLabel);
+        setText("#hero-title", copy.heroTitle);
+        setAttr(".alex-photo img", "alt", copy.alexAlt);
+        setText(".lede", copy.lede);
+        setAttr(".benefits", "aria-label", copy.benefitsLabel);
+        setList(".benefits li", copy.benefits, true);
+        setText(".primary-cta span", copy.primaryCta);
+        setAttr(".primary-cta", "aria-label", copy.primaryCtaLabel);
+        setText(".compatibility", copy.compatibility);
+        setAttr(".signup-panel", "aria-label", copy.panelLabel);
+        setText(".signup-panel .panel-kicker", copy.panelKicker);
+        setText(".signup-panel h2", copy.panelTitle);
+        setList(".role-row p", copy.roles);
+        setText(".whatsapp-label", copy.whatsapp);
+        setAttr(".whatsapp-cta", "aria-label", copy.whatsappLabel);
+        setText(".privacy-note", copy.privacyNote);
+        setAttr(".proof-band", "aria-label", copy.proofLabel);
+        setText(".problem-copy .eyebrow", copy.proofEyebrow);
+        setText(".problem-copy h2", copy.proofTitle);
+        setText(".problem-copy p:not(.eyebrow)", copy.proofCopy);
+        document.querySelectorAll(".problem-list article").forEach((article, index) => {
+          if (copy.problems[index]) {
+            setText(`.problem-list article:nth-child(${index + 1}) h3`, copy.problems[index][0]);
+            setText(`.problem-list article:nth-child(${index + 1}) p`, copy.problems[index][1]);
+          }
+        });
+        setAttr(".common-problems", "aria-label", copy.commonLabel);
+        setText(".common-problems .eyebrow", copy.commonEyebrow);
+        setText(".common-grid h2", copy.commonTitle);
+        setList(".common-list li", copy.commonItems);
+        setAttr(".features-section", "aria-label", copy.featuresLabel);
+        setText(".solution-heading .eyebrow", copy.solutionEyebrow);
+        setText(".solution-heading h2", copy.solutionTitle);
+        setText(".solution-heading p:not(.eyebrow)", copy.solutionCopy);
+        document.querySelectorAll(".feature-list article").forEach((article, index) => {
+          if (copy.featureItems[index]) {
+            setText(`.feature-list article:nth-child(${index + 1}) .feature-icon`, copy.featureItems[index][0]);
+            setText(`.feature-list article:nth-child(${index + 1}) h3`, copy.featureItems[index][1]);
+            setText(`.feature-list article:nth-child(${index + 1}) p`, copy.featureItems[index][2]);
+          }
+        });
+        setAttr(".screens", "aria-label", copy.screensLabel);
+        setText(".screen-copy .eyebrow", copy.modesEyebrow);
+        setText(".screen-copy h2", copy.modesTitle);
+        setText(".screen-copy > p:not(.eyebrow)", copy.modesCopy);
+        setAttr(".mode-cards", "aria-label", copy.modesLabel);
+        setText(".mode-cards article:nth-child(1) h3", copy.caregiverTitle);
+        setList(".mode-cards article:nth-child(1) li", copy.caregiverItems);
+        setText(".mode-cards article:nth-child(2) h3", copy.patientTitle);
+        setList(".mode-cards article:nth-child(2) li", copy.patientItems);
+        setAttr(".phone-strip", "aria-label", copy.phoneLabel);
+        document.querySelectorAll(".phone-strip img").forEach((img, index) => {
+          if (copy.phoneAlts[index]) img.alt = copy.phoneAlts[index];
+        });
+        setAttr(".expertise", "aria-label", copy.expertiseLabel);
+        setText(".expertise .eyebrow", copy.expertiseEyebrow);
+        setText(".expertise h2", copy.expertiseTitle);
+        setText(".quote p:not(.quote-credit)", copy.quote);
+        setText(".quote-credit", copy.quoteCredit);
+        setAttr(".final-cta", "aria-label", copy.finalLabel);
+        setText(".final-cta h2", copy.finalTitle);
+        setText(".final-cta p", copy.finalCopy);
+        setText(".final-button", copy.finalButton);
+        setAttr(".final-button", "aria-label", copy.finalButtonLabel);
+        setText(".floating-cta", copy.floating);
+        setAttr(".floating-cta", "aria-label", copy.floatingLabel);
+        setText("footer a", copy.privacyLink);
+        setText("footer p:nth-child(2)", copy.footerSupport);
+
+        document.querySelectorAll("[data-lang-link]").forEach((link) => {
+          const linkLanguage = link.getAttribute("data-lang-link");
+          const nextUrl = new URL(window.location.href);
+          nextUrl.searchParams.set("lang", linkLanguage);
+          link.href = `${nextUrl.pathname}${nextUrl.search}${nextUrl.hash}`;
+          if (linkLanguage === copy.lang) link.setAttribute("aria-current", "page");
+          else link.removeAttribute("aria-current");
+        });
+      }
+
+      const requestedLanguage = new URLSearchParams(window.location.search).get("lang");
+      applyLanguage(requestedLanguage === "he" ? "he" : "en");
+    </script>
   </body>
 </html>
