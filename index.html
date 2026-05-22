@@ -113,6 +113,7 @@
             <aside class="signup-panel" aria-label="Own story summary">
               <p class="panel-kicker">From family need to product</p>
               <h2>Toyra was created to support dementia care at home.</h2>
+              <p class="name-origin">Toyra is the nickname my mother used when she called my father.</p>
               <div class="role-row">
                 <span>1</span>
                 <p>Alex needed simpler ways to call, ask for help, and stay occupied.</p>
@@ -352,6 +353,7 @@ with a range of security standards</p>
           panelLabel: "Own story summary",
           panelKicker: "From family need to product",
           panelTitle: "Toyra was created to support dementia care at home.",
+          nameOrigin: "Toyra is the nickname my mother used when she called my father.",
           roles: [
             "Alex needed simpler ways to call, ask for help, and stay occupied.",
             "His caregiver needed alarms, location, remote help, and status visibility.",
@@ -460,6 +462,7 @@ with a range of security standards</p>
           panelLabel: "סיכום הסיפור האישי",
           panelKicker: "מצורך משפחתי למוצר",
           panelTitle: "Toyra נוצרה כדי לתמוך בטיפול בדמנציה בבית.",
+          nameOrigin: "Toyra הוא הכינוי שאמי השתמשה בו כשקראה לאבי.",
           roles: [
             "אלכס היה צריך דרכים פשוטות יותר להתקשר, לבקש עזרה ולהישאר עסוק.",
             "המטפל היה צריך התרעות, מיקום, עזרה מרחוק ונראות של מצב המטופל.",
@@ -595,6 +598,7 @@ with a range of security standards</p>
         setAttr(".signup-panel", "aria-label", copy.panelLabel);
         setText(".signup-panel .panel-kicker", copy.panelKicker);
         setText(".signup-panel h2", copy.panelTitle);
+        setText(".name-origin", copy.nameOrigin);
         setList(".role-row p", copy.roles);
         setText(".whatsapp-label", copy.whatsapp);
         setAttr(".whatsapp-cta", "aria-label", copy.whatsappLabel);

@@ -296,6 +296,13 @@ h3 {
   color: var(--green);
 }
 
+.name-origin {
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.35;
+}
+
 .role-row {
   display: grid;
   grid-template-columns: 38px 1fr;
