@@ -608,10 +608,14 @@ h3 {
 }
 
 .phone-strip {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
   gap: 18px;
   align-items: center;
+  overflow-x: auto;
+  padding: 4px 4px 20px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
 }
 
 .scroll-hint {
@@ -619,7 +623,8 @@ h3 {
 }
 
 .phone-strip img {
-  width: 100%;
+  flex: 0 0 auto;
+  height: var(--phone-strip-height, 520px);
   aspect-ratio: 9 / 18.8;
   border: 8px solid #101820;
   border-radius: 28px;
@@ -627,6 +632,7 @@ h3 {
   object-position: top center;
   background: #ffffff;
   box-shadow: 0 18px 32px rgba(24, 36, 43, 0.18);
+  scroll-snap-align: center;
 }
 
 .expertise {
@@ -856,12 +862,7 @@ footer a {
   }
 
   .phone-strip {
-    display: flex;
     gap: 14px;
-    overflow-x: auto;
-    padding: 4px 4px 20px;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: thin;
   }
 
   .phone-strip-wrap {
@@ -899,7 +900,7 @@ footer a {
 
   .phone-strip img {
     flex: 0 0 min(76vw, 300px);
-    scroll-snap-align: center;
+    height: auto;
   }
 
   .quote {

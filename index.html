@@ -141,7 +141,7 @@
                 <svg class="whatsapp-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
                   <path d="M16 3.2A12.6 12.6 0 0 0 5.2 22.3L3.8 28l5.9-1.5A12.6 12.6 0 1 0 16 3.2Zm0 2.4a10.2 10.2 0 0 1 8.7 15.5 10.2 10.2 0 0 1-13.8 3.4l-.4-.2-3.2.8.8-3.1-.3-.5A10.2 10.2 0 0 1 16 5.6Zm-4.1 5.4c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.9 4.5 3.9 2.2.9 2.7.7 3.2.6.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.1.1-1.3-.1-.1-.2-.2-.5-.4l-1.8-.9c-.3-.1-.5-.2-.7.2-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.5-1.5-1.8-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-1.9c-.2-.5-.4-.5-.7-.5h-.4Z"></path>
                 </svg>
-                <span class="whatsapp-label">Contact us on WhatsApp</span>
+                <span class="whatsapp-label">Talk to Founder</span>
               </a>
               <div class="privacy-note">
                 <strong>🔐 Privacy &amp; Safety</strong>
@@ -260,19 +260,19 @@
         <div class="section-inner screens-inner">
           <div class="screen-copy">
             <p class="eyebrow">Two modes</p>
-            <h2>CareGiverRole and Patient mode work together.</h2>
+            <h2>Caregiver and Patient mode work together.</h2>
             <p>
               Caregiver and Patient are linked using the patient's phone number. The patient gets a
               simple front door for help. The caregiver gets remote visibility and action tools.
             </p>
             <div class="mode-cards" aria-label="Toyra modes">
               <article>
-                <h3>CareGiverRole</h3>
+                <h3>Caregiver</h3>
                 <ul>
-                  <li>Receive emergency and condition alarms.</li>
-                  <li>Start video calls and send reminders.</li>
-                  <li>View patient location on a map.</li>
-                  <li>Check current status and snapshots.</li>
+                  <li>Less repetitive stress</li>
+                  <li>More emotional connection</li>
+                  <li>Ability to monitor remotely</li>
+                  <li>Preserved memories and stories</li>
                 </ul>
               </article>
               <article>
@@ -281,7 +281,7 @@
                   <li>Reducing loneliness and anxiety</li>
                   <li>A sense of orientation, safety, and structure in daily life</li>
                   <li>Stimulate memory and engagement</li>
-                  <li>Emotional stimulation through family-shared content (messages, videos, music)</li>
+                  <li>Emotional continuity through family-shared content (messages, videos, music)</li>
                 </ul>
               </article>
             </div>
@@ -292,6 +292,8 @@
               <img src="assets/caregiver-screen.png" alt="Toyra patient support screen with SOS button and speech assistance." loading="lazy" decoding="async">
               <img src="assets/patient-screen.png" alt="Toyra patient location screen with map and status image." loading="lazy" decoding="async">
               <img src="assets/assistant-screen.png" alt="Toyra emergency notification shown on caregiver phone." loading="lazy" decoding="async">
+              <img src="assets/VoiceOfMemory.jpeg" alt="Toyra Voice of Memory screen for family memories and life stories." loading="lazy" decoding="async">
+              <img src="assets/videocall.jpg" alt="Toyra video call screen for caregiver and patient connection." loading="lazy" decoding="async">
             </div>
           </div>
         </div>
@@ -348,6 +350,70 @@
     </footer>
 
     <script>
+      const phoneStrip = document.querySelector(".phone-strip");
+      const screenCopy = document.querySelector(".screen-copy");
+
+      if (phoneStrip) {
+        let scrollDirection = 1;
+        let autoScrollId = null;
+
+        function syncPhoneStripHeight() {
+          if (!screenCopy || window.matchMedia("(max-width: 680px)").matches) {
+            phoneStrip.style.removeProperty("--phone-strip-height");
+            return;
+          }
+
+          phoneStrip.style.setProperty("--phone-strip-height", `${screenCopy.offsetHeight}px`);
+        }
+
+        function getPhoneScrollStep() {
+          const firstImage = phoneStrip.querySelector("img");
+          if (!firstImage) return 0;
+          const styles = window.getComputedStyle(phoneStrip);
+          const gap = Number.parseFloat(styles.columnGap || styles.gap) || 0;
+          return firstImage.getBoundingClientRect().width + gap;
+        }
+
+        function startPhoneAutoScroll() {
+          if (window.matchMedia("(max-width: 680px)").matches || autoScrollId) return;
+
+          autoScrollId = window.setInterval(() => {
+            const maxScroll = phoneStrip.scrollWidth - phoneStrip.clientWidth;
+            const scrollStep = getPhoneScrollStep();
+            if (maxScroll <= 0 || scrollStep <= 0) return;
+
+            if (phoneStrip.scrollLeft >= maxScroll - 2) scrollDirection = -1;
+            if (phoneStrip.scrollLeft <= 2) scrollDirection = 1;
+
+            phoneStrip.scrollBy({
+              left: scrollDirection * scrollStep,
+              behavior: "smooth"
+            });
+          }, 2600);
+        }
+
+        function stopPhoneAutoScroll() {
+          if (!autoScrollId) return;
+          window.clearInterval(autoScrollId);
+          autoScrollId = null;
+        }
+
+        phoneStrip.addEventListener("mouseenter", stopPhoneAutoScroll);
+        phoneStrip.addEventListener("focusin", stopPhoneAutoScroll);
+        phoneStrip.addEventListener("mouseleave", startPhoneAutoScroll);
+        phoneStrip.addEventListener("focusout", startPhoneAutoScroll);
+        window.addEventListener("resize", () => {
+          syncPhoneStripHeight();
+          stopPhoneAutoScroll();
+          startPhoneAutoScroll();
+        });
+
+        syncPhoneStripHeight();
+        startPhoneAutoScroll();
+      }
+    </script>
+
+    <script>
       const pageText = {
         en: {
           lang: "en",
@@ -384,7 +450,7 @@
             "Built from real-life experience caring for my father with dementia, and developed with clinical guidance from a geriatric specialist (30+ years experience).",
             "Reduce confusion, repetition, and loneliness — while preserving dignity and connection."
           ],
-          whatsapp: "Contact us on WhatsApp",
+          whatsapp: "Talk to Founder",
           whatsappLabel: "Contact Toyra on WhatsApp",
           privacyTitle: "🔐 Privacy & Safety",
           privacyItems: [
@@ -428,29 +494,31 @@
           ],
           screensLabel: "Toyra app screens",
           modesEyebrow: "Two modes",
-          modesTitle: "CareGiverRole and Patient mode work together.",
+          modesTitle: "Caregiver and Patient mode work together.",
           modesCopy: "Caregiver and Patient are linked using the patient's phone number. The patient gets a simple front door for help. The caregiver gets remote visibility and action tools.",
           modesLabel: "Toyra modes",
           scrollHint: "Swipe to see more screens",
-          caregiverTitle: "CareGiverRole",
+          caregiverTitle: "Caregiver",
           caregiverItems: [
-            "Receive emergency and condition alarms.",
-            "Start video calls and send reminders.",
-            "View patient location on a map.",
-            "Check current status and snapshots."
+            "Less repetitive stress",
+            "More emotional connection",
+            "Ability to monitor remotely",
+            "Preserved memories and stories"
           ],
           patientTitle: "Patient",
           patientItems: [
             "Reducing loneliness and anxiety",
             "A sense of orientation, safety, and structure in daily life",
             "Stimulate memory and engagement",
-            "Emotional stimulation through family-shared content (messages, videos, music)"
+            "Emotional continuity through family-shared content (messages, videos, music)"
           ],
           phoneLabel: "Toyra interface previews",
           phoneAlts: [
             "Toyra patient support screen with SOS button and speech assistance.",
             "Toyra patient location screen with map and status image.",
-            "Toyra emergency notification shown on caregiver phone."
+            "Toyra emergency notification shown on caregiver phone.",
+            "Toyra Voice of Memory screen for family memories and life stories.",
+            "Toyra video call screen for caregiver and patient connection."
           ],
           expertiseLabel: "Care expertise",
           expertiseEyebrow: "Real-World Impact",
@@ -508,7 +576,7 @@
             "נבנתה מתוך ניסיון חיים אמיתי בטיפול באבי עם דמנציה, ופותחה בליווי קליני של מומחה גריאטרי עם יותר מ-30 שנות ניסיון.",
             "מפחיתה בלבול, חזרתיות ובדידות — תוך שמירה על כבוד, חיבור וקרבה."
           ],
-          whatsapp: "צרו קשר ב-WhatsApp",
+          whatsapp: "דברו עם היזם",
           whatsappLabel: "יצירת קשר עם Toyra ב-WhatsApp",
           privacyTitle: "🔐 פרטיות ובטיחות",
           privacyItems: [
@@ -558,10 +626,10 @@
           scrollHint: "החליקו כדי לראות מסכים נוספים",
           caregiverTitle: "מטפל",
           caregiverItems: [
-            "קבלת התרעות חירום והתרעות מצב.",
-            "התחלת שיחות וידאו ושליחת תזכורות.",
-            "צפייה במיקום המטופל על מפה.",
-            "בדיקת מצב נוכחי ותמונות מצב."
+            "פחות עומס מחזרתיות",
+            "יותר חיבור רגשי",
+            "יכולת לנטר מרחוק",
+            "שימור זיכרונות וסיפורים"
           ],
           patientTitle: "מטופל",
           patientItems: [
@@ -574,7 +642,9 @@
           phoneAlts: [
             "מסך תמיכה במטופל עם כפתור SOS וסיוע בדיבור.",
             "מסך מיקום המטופל עם מפה ותמונת מצב.",
-            "התראת חירום של Toyra שמוצגת בטלפון המטפל."
+            "התראת חירום של Toyra שמוצגת בטלפון המטפל.",
+            "מסך Voice of Memory של Toyra לזיכרונות משפחתיים וסיפורי חיים.",
+            "מסך שיחת וידאו של Toyra לחיבור בין המטפל למטופל."
           ],
           expertiseLabel: "מומחיות טיפול",
           expertiseEyebrow: "השפעה בעולם האמיתי",
