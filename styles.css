@@ -1012,6 +1012,19 @@ footer a {
     font-size: 19px;
   }
 
+  .final-actions {
+    row-gap: 12px;
+  }
+
+  .final-button {
+    flex: 0 1 100%;
+    max-width: 320px;
+  }
+
+  .final-icon-button {
+    flex: 0 0 52px;
+  }
+
   .floating-cta {
     display: none;
   }
