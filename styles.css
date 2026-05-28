@@ -229,7 +229,7 @@ h3 {
 .lede {
   max-width: 650px;
   margin-bottom: 16px;
-  color: rgba(255, 255, 255, 0.9);
+  color: #78b7ff;
   font-size: clamp(17px, 2.2vw, 21px);
 }
 
