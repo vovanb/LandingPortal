@@ -113,7 +113,10 @@
                 href="https://play.google.com/store/apps/details?id=com.MOMM.Toyra&pcampaignid=web_share"
                 aria-label="Get Toyra on Google Play now"
               >
-                <span>Get Toyra now</span>
+                <span class="primary-cta-copy">
+                  <span class="primary-cta-main">Get Toyra now</span>
+                  <span class="primary-cta-sub">Free for a limited time</span>
+                </span>
                 <img src="assets/google-play.png" alt="" aria-hidden="true">
               </a>
 
@@ -462,6 +465,7 @@
           ],
           primaryCta: "Get Toyra now",
           primaryCtaLabel: "Get Toyra on Google Play now",
+          limitedOffer: "Free for a limited time",
           compatibility: "Requires Android 8.0 or higher for caregiver and patient.",
           infoLink: "Learn more about Toyra",
           infoLinkUrl: "https://toyra.my.canva.site/",
@@ -593,6 +597,7 @@
           ],
           primaryCta: "התקנת Toyra",
           primaryCtaLabel: "התקנת Toyra מ-Google Play",
+          limitedOffer: "חינם לזמן מוגבל",
           compatibility: "נדרש Android 8.0 ומעלה עבור המטפל והמטופל.",
           infoLink: "למידע נוסף על Toyra",
           infoLinkUrl: "https://toyra.my.canva.site/heb",
@@ -749,7 +754,8 @@
         setText(".lede", copy.lede);
         setAttr(".benefits", "aria-label", copy.benefitsLabel);
         setList(".benefits li", copy.benefits, true);
-        setText(".primary-cta span", copy.primaryCta);
+        setText(".primary-cta-main", copy.primaryCta);
+        setText(".primary-cta-sub", copy.limitedOffer);
         setAttr(".primary-cta", "aria-label", copy.primaryCtaLabel);
         setText(".compatibility", copy.compatibility);
         setText(".info-link", copy.infoLink);

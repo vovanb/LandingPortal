@@ -303,6 +303,18 @@ h3 {
   font-size: 18px;
 }
 
+.primary-cta-copy {
+  display: grid;
+  gap: 3px;
+  line-height: 1.1;
+}
+
+.primary-cta-sub {
+  font-size: 13px;
+  font-weight: 800;
+  opacity: 0.88;
+}
+
 .primary-cta img {
   width: 132px;
   height: auto;
