@@ -1025,6 +1025,12 @@ footer a {
     flex: 0 0 52px;
   }
 
+  footer p:first-child a {
+    display: block;
+    width: fit-content;
+    margin: 8px auto 0;
+  }
+
   .floating-cta {
     display: none;
   }
